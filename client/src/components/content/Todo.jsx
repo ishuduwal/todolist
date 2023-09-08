@@ -56,11 +56,11 @@ export const Todo = () => {
                     <p>It will be a busy so keeping it here can save my day from missing.</p>
                 </div>
             </div>
-            <div className='text-xl cursor-pointer flex gap-5 btn-add-edit'>
-                <div>
+            <div className='text-xl flex gap-5 btn-add-edit'>
+                <div className='cursor-pointer'>
                     <i class="fa-solid fa-pen-to-square"></i>
                 </div>
-                <div>
+                <div className='cursor-pointer'>
                     <i class="fa-solid fa-trash"></i>
                 </div>
             </div>
