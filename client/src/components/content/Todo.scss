@@ -1,0 +1,52 @@
+.todo-box{
+    margin-top: 4rem;
+    max-width: 15rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1,1fr);
+    background-color: #dddddd;
+    height: 22rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+.todo{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.add-todo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+.add-todo{
+    i{
+        font-size: 1.3rem;
+    }
+}
+.todo-box{
+    button{
+        height: 2rem;
+        width: 8rem;
+        background-color: rgba(94,0,184,255);
+        color: #fff;
+        transition: 0.3s;
+    }
+    button:active{
+        scale: 0.9;
+    }
+}
+.todo-box{
+    div{
+        input, textarea{
+            border: 1px solid #000;
+            outline: none;
+            padding-left: 0.1rem;
+            font-size: 1rem;
+        }
+    }
+}
