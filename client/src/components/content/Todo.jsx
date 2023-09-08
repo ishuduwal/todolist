@@ -45,6 +45,26 @@ export const Todo = () => {
             </div>
          </div>     
         )}
+        <div className='flex added-todo justify-center items-center mb-8'>
+            <div className='text-area-todo gap-2 grid'>
+                <div className='flex gap-1'>
+                    <p className='font-bold'>Title:</p>
+                    <p>Complete redux course</p>
+                </div>
+                <div className='flex flex-col'>
+                    <p className='font-bold'>Description:</p>
+                    <p>It will be a busy so keeping it here can save my day from missing.</p>
+                </div>
+            </div>
+            <div className='text-xl cursor-pointer flex gap-5 btn-add-edit'>
+                <div>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+        </div>
     </div>
     </>
   )
