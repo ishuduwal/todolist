@@ -2,7 +2,9 @@ import './Todo.scss'
 import React,{ useState, useEffect, useRef } from 'react'
 
 export const Todo = () => {
-
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [todos, setTodos] = useState([]);
     const [IstoggleTodoVisible, setIstoggleTodoVisible] = useState(false);
     const todoBoxRef = useRef(null);
     const toggleTodo = () => {
@@ -16,7 +18,19 @@ export const Todo = () => {
     }
 
     const handleAddList = () => {
-        setIstoggleTodoVisible(false);
+        if (title.trim() !== '' && description.trim() !== '') {
+            setTodos([...todos, { title, description }]);
+            setTitle('');
+            setDescription('');
+            setIstoggleTodoVisible(false);
+        }
+    }
+
+    const handleTitleChange = (event) => {
+        setTitle(event.target.value);
+    }
+    const handleDescriptionChange = (event) => {
+        setDescription(event.target.value);
     }
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
@@ -34,11 +48,11 @@ export const Todo = () => {
             <div className='todo-box' ref={todoBoxRef}>
             <div className='grid'>
                <label>Title:</label>
-               <input type="text" className='h-8'/>
+               <input type="text" className='h-8' value={title} onChange={handleTitleChange } />
             </div>
             <div className='grid'>
                <label>Description:</label>
-               <textarea className='h-40'/>
+               <textarea className='h-40' value={description} onChange={handleDescriptionChange}/>
             </div>
             <div className='grid'>
                <button className='add-btn' onClick={handleAddList}>Add list</button>
@@ -49,11 +63,11 @@ export const Todo = () => {
             <div className='text-area-todo gap-2 grid'>
                 <div className='flex gap-1'>
                     <p className='font-bold'>Title:</p>
-                    <p>Complete redux course</p>
+                    <p>{title}</p>
                 </div>
                 <div className='flex flex-col'>
                     <p className='font-bold'>Description:</p>
-                    <p>It will be a busy so keeping it here can save my day from missing.</p>
+                    <p>{description}</p>
                 </div>
             </div>
             <div className='text-xl flex gap-5 btn-add-edit'>
