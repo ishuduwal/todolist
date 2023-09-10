@@ -43,15 +43,9 @@ export const editTodo = async (req, res) => {
 }
 export const deleteTodo = async (req, res) => {
     try {
-      const { id } = req.body; 
-      if (!id) {
-        return res.status(400).json({ message: 'Please provide an ID for the todo to delete' });
-      }
-      const deletedTodo = await Todo.findByIdAndDelete(id);
-      if (!deletedTodo) {
-        return res.status(404).json({ message: 'Todo not found' });
-      }
-      res.status(200).json({ message: 'Todo deleted successfully', todo: deletedTodo });
+      const {id}  = req.body; 
+        await Todo.findOneAndDelete({_id:id});
+      res.status(200).json({ message: 'Todo deleted successfully'});
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: 'Server error' });
