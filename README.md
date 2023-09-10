@@ -1,1 +1,1 @@
-![image](https://github.com/ishuduwal/todolist/assets/115239975/3614cb5e-39d7-487a-b5af-ba3f73fab7d0)![image](https://github.com/ishuduwal/todolist/assets/115239975/2aed824e-51bd-4ce6-952e-066a34dd0adb)
+![image](https://github.com/ishuduwal/todolist/assets/115239975/3614cb5e-39d7-487a-b5af-ba3f73fab7d0)
