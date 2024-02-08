@@ -1,7 +1,7 @@
 .navbar{
     background-color: rgba(94,0,184,255);
     height: 3.5rem;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     display: flex;
     top: 0;
@@ -10,4 +10,8 @@
     left: 0;
     color: #fff;
     font-size: 1.5rem;
+    padding: 0 10rem;
+    div{
+        cursor: pointer;
+    }
 }

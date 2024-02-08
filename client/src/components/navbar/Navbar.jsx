@@ -4,7 +4,10 @@ export const Navbar = () => {
   return (
     <>
       <div className='navbar'> 
-        Todo App
+        <span>Todo</span>
+        <div>
+        <i class="fa-solid fa-user"></i>
+        </div>
       </div>
     </>
   )
