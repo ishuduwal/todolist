@@ -1,6 +1,6 @@
 import './Todo.scss'
 import React, { useState, useEffect, useRef } from 'react'
-import { getTodo, addTodo, deleteTodo } from '../../api/todo';
+import { getTodo, addTodo, deleteTodo } from '../../api/Todo';
 
 export const Todo = () => {
     const [todo, setTodo] = useState([]);
